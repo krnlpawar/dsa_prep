@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let arr = [10, 20 , 30 , 40, 50, 60];
+
+		let newVal = 90;
+		let postion = 2;
+		console.log(arr)
+
+		for(let i = arr.length - 1; i > 0; i--){
+			console.log(i, arr[i])
+			if(i >= postion){
+				arr[i+1] = arr[i]
+				if(i == postion){
+					arr[postion] = newVal
+				}
+			}
+		}
+
+		console.log(arr)
+	</script>
+</body>
+</html>
