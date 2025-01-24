@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let stack = []
+		let size = stack.length;
+		let max = 5;
+
+		function push(val){
+			if(size >= max) {
+				console.log('stack overflow')
+				console.log(stack)
+			}else{
+				stack[size] = val
+				size++;
+				console.log(stack)
+			}
+		}
+
+		function pop(){
+			if(size <= 0){
+				console.log('stack underflow')
+				console.log(stack)
+				return
+			}{
+				stack.length = stack.length - 1;
+				size--;
+				console.log(stack)
+			}
+		}
+
+		push(1)
+		push(2)
+		push(3)
+		pop()
+		pop()
+		pop()
+		pop()
+		push(3)
+		push(3)
+		push(3)
+		push(3)
+		push(3)
+		push(3)
+
+	</script>
+</body>
+</html>
