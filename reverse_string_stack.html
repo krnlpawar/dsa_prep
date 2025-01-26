@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let str = 'krunal'
+		let strarray = str.split('')
+		let item = []
+		function push(val){
+			item[item.length] = val
+			console.log(item)
+		}
+
+		function pop(){
+			let lastChar = item[item.length - 1]
+			console.log(lastChar)
+			item.length = item.length - 1
+			return lastChar
+		}
+
+		console.log(strarray)
+		function revArray(strarray){
+			for (let index = 0; index < strarray.length; index++) {
+				push(strarray[index])	
+			}
+
+			for (let index = 0; index < strarray.length; index++) {
+				strarray[index] = pop(strarray[index])
+			}
+			console.log(strarray.join(''))
+		}
+		revArray(strarray)
+	</script>
+</body>
+</html>

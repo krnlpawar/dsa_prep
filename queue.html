@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let queue = []
+		let currentSize = queue.length
+		let maxSize = 5
+
+		function enqueue(item){
+			if(currentSize < maxSize){
+				queue[currentSize] = item
+				currentSize++
+			}else{
+				console.log('queue is full')
+			}
+		}
+
+		function display(){
+			console.log(queue)
+		}
+
+		function dequeue(){
+			let item
+			item = queue[0]
+			for (let index = 0; index < queue.length; index++) {
+				queue[index] = queue[index+1]
+			}
+			queue.length = queue.length - 1;
+			return item
+		}
+	</script>
+</body>
+</html>
